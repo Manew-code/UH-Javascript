@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 5</title>
+</head>
+<body>
+    <p id="myParagraph">Saya merasa belum bisa belajar javascript</p>
+    <button id="myButton" onclick="ubahKalimat()">Ubah kalimat dan background</button>
+
+    <script>
+        function ubahKalimat() {
+            document.getElementById("myParagraph").innerHTML = "Ternyata saya masih kurang berlatih belajar javascript";
+
+            var body = document.body;
+
+            body.style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>

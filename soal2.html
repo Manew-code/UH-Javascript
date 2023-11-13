@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+</head>
+<body>
+    <label>kode barang</label> <input id="kode" type="number"><br><br>
+    <label>nama barang</label> <input id="namabrg" type="text"><br><br>
+    <label>harga</label> <input id="harga" type="number"><br><br>
+    <label>jumlah barang</label> <input id="jmlhbrg" type="number"><br><br>
+    <button onclick="tampil()">Tampilkan</button>
+    <div id="outkode"></div> 
+    <div id="outnamabrg"></div>
+    <div id="outharga"></div>
+    <div id="outjmlhbrg"></div>
+    <div id="totalHarga"></div>
+        <script>
+            function tampil(){
+            let outkode = document.querySelector("#outkode");  
+            let outnamabrg = document.querySelector("#outnamabrg");
+            let outharga = document.querySelector("#outharga");
+            let outjmlhbrg = document.querySelector("#outjmlhbrg");
+            let totalHargaElement = document.querySelector("#totalHarga");
+
+            let kode = parseFloat(document.getElementById('kode').value);
+            let namabrg = document.getElementById('namabrg').value;
+            let harga = parseFloat(document.getElementById('harga').value);
+            let jmlhbrg = parseInt(document.getElementById('jmlhbrg').value);
+
+            outkode.innerHTML = `kode barang adalah ${kode}`
+            outnamabrg.innerHTML = `nama barang adalah ${namabrg}`
+            outharga.innerHTML = `harga barang adalah ${harga}`
+            outjmlhbrg.innerHTML = `jumlah barang sebanyak ${jmlhbrg}`
+
+            let totalHarga = harga * jmlhbrg;
+            totalHargaElement.innerHTML = `Total Harga: ${totalHarga}`;
+        }
+        </script>
+</body>
+</html>

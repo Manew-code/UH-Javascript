@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 4</title>
+</head>
+<body>
+    <label for="golongandarah">Masukkan Golongan Darah:</label>
+    <input type="text" id="golonganDarah">
+    <button onclick="cekNilai()">Cek</button>
+
+    <div id="outputDiv"></div>
+
+    <script>
+         function cekNilai() {
+            var nilai = document.getElementById('golonganDarah').value;
+
+            if (nilai.toUpperCase() === 'A') {
+                document.getElementById('outputDiv').innerHTML = 'Identik dengan sifatnnya yang terorganisir, kritis, tenang dalam menghadapi masalah';
+            } 
+            else if (nilai.toUpperCase() === 'B') {
+                document.getElementById('outputDiv').innerHTML = 'semangat yang tinggi, aktif, kreatif, dan selalu ingin tahu';
+            }
+            else if (nilai.toUpperCase() === 'AB') {
+                document.getElementById('outputDiv').innerHTML = 'memiliki karakter yang kritis, rasional, bertanggung jawab, suka menolong, dan mudah beradaptasi';
+            }
+            else if (nilai.toUpperCase() === 'O') {
+                document.getElementById('outputDiv').innerHTML = 'sikapnya yang mudah beradaptasi dengan lingkungan baru atau easy going';
+            }   
+            else 
+            {
+                document.getElementById('outputDiv').innerHTML = 'Input salah / gak ada';
+            }
+        }
+    </script>
+</body>
+</html>
